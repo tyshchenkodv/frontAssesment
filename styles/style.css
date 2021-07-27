@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', serif;
+    color: #082264;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.logo a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 33px;
+    height: 30px;
+}
+
+.logo p {
+    max-width: 145px;
+    margin-left: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #082264;
+    font-weight: 700;
+}
+
+.navigation {
+    overflow: hidden;
+    width: auto;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navigation a {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #082264;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    color: black;
+}
+
+.mobileIconContainer {
+    display: none;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.mobileNavBar1, .mobileNavBar2, .mobileNavBar3 {
+    width: 20px;
+    height: 2px;
+    background-color: #082264;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.change .mobileNavBar1 {
+    transform: rotate(-45deg) translate(-3px, 3px);
+}
+
+.change .mobileNavBar2 {opacity: 0;}
+
+.change .mobileNavBar3 {
+    transform: rotate(45deg) translate(-4px, -4px);
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        flex-flow: row wrap;
+        margin: 20px 0 20px 20px;
+    }
+    .logo {
+        order: 1;
+        flex-grow: 1;
+    }
+    .navigation {
+        display: none;
+        order: 3;
+        flex-grow: 2;
+    }
+    .mobileIconContainer {
+        display: block;
+        order: 2;
+        flex-grow: 0;
+    }
+    .navigation.responsive {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .navigation.responsive a {
+        float: none;
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 10px 0;
+    }
+    .navigation.responsive a:not(:last-child) {
+        border-bottom: 1px #EEF9FF;
+    }
+}
+
+section {
+    width: auto;
+    max-height: 400px;
+    padding: 60px 0;
+}
+
+.hero {
+    background: url("./../images/hero-image.png") no-repeat center center;
+    background-size: cover;
+}
+
+.hero span {
+    display: block;
+    max-width: 480px;
+    margin-left: 0;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 51px;
+    margin: 25px 0;
+}
+
+sub {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+@media screen and (max-width: 1024px) {
+    section {
+        padding: 20px;
+    }
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+}
