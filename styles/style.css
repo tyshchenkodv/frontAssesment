@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-family: 'Montserrat', serif;
@@ -23,7 +27,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1024px;
+    max-width: 1160px;
     margin: auto;
 }
 
@@ -98,7 +102,7 @@ header {
     transform: rotate(45deg) translate(-4px, -4px);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1160px) {
     header {
         flex-flow: row wrap;
         margin: 20px 0 20px 20px;
@@ -136,13 +140,14 @@ header {
 
 section {
     width: auto;
-    max-height: 400px;
-    padding: 60px 0;
+    margin: 60px 0;
 }
 
 .hero {
     background: url("./../images/hero-image.png") no-repeat center center;
     background-size: cover;
+    margin: 0;
+    padding: 60px 0;
 }
 
 .hero span {
@@ -154,18 +159,111 @@ section {
 }
 
 .container {
-    max-width: 1024px;
+    max-width: 1160px;
     margin: auto;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1160px) {
     section {
-        padding: 20px;
+        margin: 20px;
     }
 
     .container {
         text-align: center;
         display: flex;
         justify-content: center;
+    }
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    padding: 20px;
+    background-color: #082264;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+footer p {
+    color: white;
+    margin: 0;
+}
+
+footer p a {
+    color: white;
+}
+
+.content .container {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content:nth-child(even) .container {
+    flex-direction: row-reverse;
+}
+
+.content .container img {
+    width: 100%;
+    height: auto;
+    max-width: 518px;
+    max-height: 350px;
+}
+
+.contentText {
+    max-width: 523px;
+}
+
+.contentText h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #55B8F0;
+}
+
+.contentText h2 {
+    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #082264;
+}
+
+.contentText p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #082264;
+}
+
+.contentText button {
+    width: 216px;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    background-color: #55B8F0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+@media screen and (max-width: 1160px) {
+    .content .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
