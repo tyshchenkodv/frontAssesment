@@ -165,13 +165,18 @@ section {
 
 @media screen and (max-width: 1160px) {
     section {
-        margin: 20px;
+        margin: 60px 20px;
     }
 
     .container {
         text-align: center;
         display: flex;
         justify-content: center;
+    }
+
+    .container span {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
@@ -266,4 +271,112 @@ footer p a {
         align-items: center;
         text-align: center;
     }
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #D9D9E8;
+    border-radius: 4px 4px 0px 0px;
+}
+
+tr th,
+tr td{
+    border-bottom: 1px solid #D9D9E8;
+    box-sizing: border-box;
+}
+
+thead tr,
+tfoot tr {
+    background-color: #EEF9FF;
+}
+
+thead th {
+    text-align: start;
+}
+
+th, td {
+    padding: 15px;
+}
+
+tbody th:nth-child(1) {
+    text-align: start;
+}
+
+tbody td {
+    color: black;
+}
+
+tfoot th {
+    border: none;
+    text-align: start;
+}
+
+tfoot td {
+    border: none;
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+    table, thead, tbody, th, td, tr, tfoot {
+        display: block;
+        border: none;
+    }
+
+    tbody tr:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr { border: 1px solid #D9D9E8; }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #D9D9E8;
+        position: relative;
+        padding-left: 40%;
+    }
+
+    td:last-child {
+        border: none;
+    }
+
+    td:before {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+        padding-right: 10px;
+        white-space: nowrap;
+        border-right: 1px solid #D9D9E8;
+        background-color: #EEF9FF;
+        font-weight: 600;
+        color: #082264;
+    }
+
+    td:before:last-child {
+        border: none;
+    }
+
+    tfoot {
+        margin-top: 10px;
+    }
+
+    td:nth-of-type(1):before { content: "Navn"; }
+    td:nth-of-type(2):before { content: "Company"; }
+    td:nth-of-type(3):before { content: "Level"; }
+    td:nth-of-type(4):before { content: "Deals closed"; }
+    td:nth-of-type(5):before { content: "State"; }
+    td:nth-of-type(6):before { content: "Phone"; }
+    td:nth-of-type(7):before { content: "Email"; }
 }
