@@ -380,3 +380,51 @@ only screen and (max-width: 760px),
     td:nth-of-type(6):before { content: "Phone"; }
     td:nth-of-type(7):before { content: "Email"; }
 }
+
+tfoot * {
+    font-weight: normal;
+}
+
+.tfoot-total {
+    display: inline-block;
+}
+
+.paginator {
+    display: inline-block;
+    float: right;
+}
+
+.num {
+    display: none;
+}
+
+.arrow {
+    background-color: #EEF9FF;
+    border: solid #082264;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg)  translate(5px, -5px);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg)  translate(-5px, 5px);
+}
+
+.select {
+    width: 60px;
+    margin: 0 15px;
+    font-size: 14px;
+    line-height: 130%;
+}
+
+#side {
+    display: inline-block;
+    margin: 0 15px;
+}

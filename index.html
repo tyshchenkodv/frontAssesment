@@ -5,6 +5,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,800" rel="stylesheet">
         <link href="./styles/style.css" rel="stylesheet">
         <script type="text/javascript" src="./js/changeIcon.js" defer></script>
+        <script type="text/javascript" src="./js/pagination.js" defer></script>
     </head>
     <body>
         <div class="page">
@@ -73,7 +74,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
+                        <tr data-page="1" class="num">
                             <td>Christian Andersen</td>
                             <td>Pixel Inc.</td>
                             <td>Senior</td>
@@ -82,7 +83,7 @@
                             <td>+1764156161</td>
                             <td>chandersen@pixel.com</td>
                         </tr>
-                        <tr>
+                        <tr data-page="2" class="num">
                             <td>Christian Andersen</td>
                             <td>Pixel Inc.</td>
                             <td>Senior</td>
@@ -91,7 +92,7 @@
                             <td>+1764156161</td>
                             <td>chandersen@pixel.com</td>
                         </tr>
-                        <tr>
+                        <tr data-page="3" class="num">
                             <td>Christian Andersen</td>
                             <td>Pixel Inc.</td>
                             <td>Senior</td>
@@ -100,7 +101,7 @@
                             <td>+1764156161</td>
                             <td>chandersen@pixel.com</td>
                         </tr>
-                        <tr>
+                        <tr data-page="4" class="num">
                             <td>Christian Andersen</td>
                             <td>Pixel Inc.</td>
                             <td>Senior</td>
@@ -109,7 +110,7 @@
                             <td>+1764156161</td>
                             <td>chandersen@pixel.com</td>
                         </tr>
-                        <tr>
+                        <tr data-page="5" class="num">
                             <td>Christian Andersen</td>
                             <td>Pixel Inc.</td>
                             <td>Senior</td>
@@ -118,7 +119,7 @@
                             <td>+1764156161</td>
                             <td>chandersen@pixel.com</td>
                         </tr>
-                        <tr>
+                        <tr data-page="6" class="num">
                             <td>Christian Andersen</td>
                             <td>Pixel Inc.</td>
                             <td>Senior</td>
@@ -127,7 +128,7 @@
                             <td>+1764156161</td>
                             <td>chandersen@pixel.com</td>
                         </tr>
-                        <tr>
+                        <tr data-page="7" class="num">
                             <td>Christian Andersen</td>
                             <td>Pixel Inc.</td>
                             <td>Senior</td>
@@ -139,7 +140,20 @@
                         </tbody>
                         <tfoot>
                         <tr>
-                            <th scope="row" colspan="7">Total agents: 28</th>
+                            <th scope="row" class="tfoot-row" colspan="7">
+                                <div class="tfoot-total">Total agents: 28</div>
+                                <div class="paginator">
+                                    <label for="itemsPerPage">Resultater per side:</label>
+                                    <select id="itemsPerPage" class="select" onchange="changeItemsPerPage(this)">
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                        <option value="15">15</option>
+                                    </select>
+                                    <div id="side"></div>
+                                    <button type="button" class="arrow left" onclick="handlePrevClick()"></button>
+                                    <button type="button" class="arrow right" onclick="handleNextClick()"></button>
+                                </div>
+                            </th>
                         </tr>
                         </tfoot>
                     </table>
