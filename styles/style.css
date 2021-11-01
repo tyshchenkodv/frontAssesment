@@ -5,25 +5,45 @@ html, body {
 body {
     margin: 0;
     font-family: 'Montserrat', serif;
-    color: #082264;
 }
 
 h1 {
-    font-style: normal;
     font-weight: 600;
     font-size: 42px;
     line-height: 51px;
-    margin: 25px 0;
+    color: #082264;
+    margin: 0;
 }
 
-sub {
-    font-style: normal;
-    font-weight: normal;
+h2 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #082264;
+    margin: 0;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #55B8F0;
+    margin: 0;
+}
+
+p {
+    font-size: 18px;
+    line-height: 22px;
+    color: #082264;
+    margin: 0;
+}
+
+.sub-text {
     font-size: 18px;
     line-height: 22px;
 }
 
-header {
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,25 +51,20 @@ header {
     margin: auto;
 }
 
-.logo a {
+.logo-link {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-decoration: none;
 }
 
-.logo img {
-    width: 33px;
-    height: 30px;
-}
-
-.logo p {
+.logo-text {
     max-width: 145px;
     margin-left: 15px;
+    font-weight: bold;
     font-size: 12px;
+    line-height: 15px;
     text-transform: uppercase;
-    color: #082264;
-    font-weight: 700;
 }
 
 .navigation {
@@ -102,6 +117,39 @@ header {
     transform: rotate(45deg) translate(-4px, -4px);
 }
 
+.contentText {
+    max-width: 523px;
+}
+
+.contentText h3 {
+    margin-bottom: 8px;
+}
+
+.contentText h2 {
+    margin-bottom: 14px;
+}
+
+.contentText p {
+    margin-bottom: 24px;
+}
+
+.primary-button {
+    cursor: pointer;
+    width: 216px;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    background-color: #55B8F0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.primary-button:hover {
+    background-color: #00a0ff;
+}
+
 @media screen and (max-width: 1160px) {
     header {
         flex-flow: row wrap;
@@ -136,6 +184,9 @@ header {
     .navigation.responsive a:not(:last-child) {
         border-bottom: 1px #EEF9FF;
     }
+    .contentText {
+        padding-top: 25px;
+    }
 }
 
 section {
@@ -148,14 +199,22 @@ section {
     background-size: cover;
     margin: 0;
     padding: 60px 0;
+    width: 100%;
 }
 
-.hero span {
+.hero .container {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     width: 100%;
+}
+
+.hero-text-width {
     max-width: 480px;
+}
+
+.hero-text {
+    margin-bottom: 25px;
 }
 
 .container {
@@ -174,32 +233,21 @@ section {
         justify-content: center;
     }
 
-    .container span {
+    .container .hero-text-width {
         margin-left: 20px;
         margin-right: 20px;
     }
-}
 
-footer {
-    position: sticky;
-    bottom: 0;
-    padding: 20px;
-    background-color: #082264;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 16px;
-    line-height: 20px;
-}
+    .hero .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
 
-footer p {
-    color: white;
-    margin: 0;
-}
-
-footer p a {
-    color: white;
+    .logo-link {
+        padding-left: 20px;
+    }
 }
 
 .content .container {
@@ -221,47 +269,6 @@ footer p a {
     max-height: 350px;
 }
 
-.contentText {
-    max-width: 523px;
-}
-
-.contentText h3 {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    color: #55B8F0;
-}
-
-.contentText h2 {
-    margin: 0;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 44px;
-    color: #082264;
-}
-
-.contentText p {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-    color: #082264;
-}
-
-.contentText button {
-    width: 216px;
-    height: 40px;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    background-color: #55B8F0;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-}
-
 @media screen and (max-width: 1160px) {
     .content .container {
         width: 100%;
@@ -277,7 +284,8 @@ table {
     width: 100%;
     border-spacing: 0;
     border: 1px solid #D9D9E8;
-    border-radius: 4px 4px 0px 0px;
+    border-radius: 4px 4px 0 0;
+    color: #082264;
 }
 
 tr th,
@@ -357,7 +365,6 @@ only screen and (max-width: 760px),
         width: 30%;
         height: 100%;
         padding-right: 10px;
-        white-space: nowrap;
         border-right: 1px solid #D9D9E8;
         background-color: #EEF9FF;
         font-weight: 600;
@@ -379,10 +386,6 @@ only screen and (max-width: 760px),
     td:nth-of-type(5):before { content: "State"; }
     td:nth-of-type(6):before { content: "Phone"; }
     td:nth-of-type(7):before { content: "Email"; }
-}
-
-tfoot * {
-    font-weight: normal;
 }
 
 .tfoot-total {
@@ -427,4 +430,25 @@ tfoot * {
 #side {
     display: inline-block;
     margin: 0 15px;
+}
+
+footer {
+    bottom: 0;
+    padding: 20px;
+    background-color: #082264;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.footer-text {
+    color: white;
+    margin: 0;
+}
+
+.footer-link {
+    color: white;
 }
