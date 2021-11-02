@@ -1,36 +1,70 @@
+html, body {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-family: 'Montserrat', serif;
-    color: #082264;
 }
 
-header {
+h1 {
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 51px;
+    color: #082264;
+    margin: 0;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #082264;
+    margin: 0;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #55B8F0;
+    margin: 0;
+}
+
+p {
+    font-size: 18px;
+    line-height: 22px;
+    color: #082264;
+    margin: 0;
+}
+
+.sub-text {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1024px;
+    max-width: 1160px;
     margin: auto;
 }
 
-.logo a {
+.logo-link {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-decoration: none;
 }
 
-.logo img {
-    width: 33px;
-    height: 30px;
-}
-
-.logo p {
+.logo-text {
     max-width: 145px;
     margin-left: 15px;
+    font-weight: bold;
     font-size: 12px;
+    line-height: 15px;
     text-transform: uppercase;
-    color: #082264;
-    font-weight: 700;
 }
 
 .navigation {
@@ -83,7 +117,40 @@ header {
     transform: rotate(45deg) translate(-4px, -4px);
 }
 
-@media screen and (max-width: 1024px) {
+.contentText {
+    max-width: 523px;
+}
+
+.contentText h3 {
+    margin-bottom: 8px;
+}
+
+.contentText h2 {
+    margin-bottom: 14px;
+}
+
+.contentText p {
+    margin-bottom: 24px;
+}
+
+.primary-button {
+    cursor: pointer;
+    width: 216px;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    background-color: #55B8F0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.primary-button:hover {
+    background-color: #00a0ff;
+}
+
+@media screen and (max-width: 1160px) {
     header {
         flex-flow: row wrap;
         margin: 20px 0 20px 20px;
@@ -117,47 +184,228 @@ header {
     .navigation.responsive a:not(:last-child) {
         border-bottom: 1px #EEF9FF;
     }
+    .contentText {
+        padding-top: 25px;
+    }
 }
 
 section {
     width: auto;
-    max-height: 400px;
-    padding: 60px 0;
+    margin: 60px 0;
 }
 
 .hero {
     background: url("./../images/hero-image.png") no-repeat center center;
     background-size: cover;
+    margin: 0;
+    padding: 60px 0;
+    width: 100%;
 }
 
-.hero span {
-    display: block;
+.hero .container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hero-text-width {
     max-width: 480px;
-    margin-left: 0;
 }
 
-h1 {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 42px;
-    line-height: 51px;
-    margin: 25px 0;
-}
-
-sub {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-}
-
-@media screen and (max-width: 1024px) {
-    section {
-        padding: 20px;
-    }
+.hero-text {
+    margin-bottom: 25px;
 }
 
 .container {
-    max-width: 1024px;
+    max-width: 1160px;
     margin: auto;
+}
+
+@media screen and (max-width: 1160px) {
+    section {
+        margin: 60px 20px;
+    }
+
+    .container {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container .hero-text-width {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .hero .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .logo-link {
+        padding-left: 20px;
+    }
+}
+
+.content .container {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content:nth-child(even) .container {
+    flex-direction: row-reverse;
+}
+
+.content .container img {
+    width: 100%;
+    height: auto;
+    max-width: 518px;
+    max-height: 350px;
+}
+
+@media screen and (max-width: 1160px) {
+    .content .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #D9D9E8;
+    border-radius: 4px 4px 0 0;
+    color: #082264;
+}
+
+tr th,
+tr td{
+    border-bottom: 1px solid #D9D9E8;
+    box-sizing: border-box;
+}
+
+thead tr,
+tfoot tr {
+    background-color: #EEF9FF;
+}
+
+thead th {
+    text-align: start;
+}
+
+th, td {
+    padding: 15px;
+}
+
+tbody th:nth-child(1) {
+    text-align: start;
+}
+
+tbody td {
+    color: black;
+}
+
+tfoot th {
+    border: none;
+    text-align: start;
+}
+
+tfoot td {
+    border: none;
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+    table thead, table tfoot {
+        display: none;
+    }
+
+    table td {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #082264;
+        width: 30%;
+        border-right: 1px solid #D9D9E8;
+    }
+}
+
+.tfoot-total {
+    display: inline-block;
+}
+
+.paginator {
+    display: inline-block;
+    float: right;
+}
+
+.num {
+    display: none;
+}
+
+.arrow {
+    background-color: #EEF9FF;
+    border: solid #082264;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg)  translate(5px, -5px);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg)  translate(-5px, 5px);
+}
+
+.select {
+    width: 60px;
+    margin: 0 15px;
+    font-size: 14px;
+    line-height: 130%;
+}
+
+#side {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+footer {
+    bottom: 0;
+    padding: 20px;
+    background-color: #082264;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.footer-text {
+    color: white;
+    margin: 0;
+}
+
+.footer-link {
+    color: white;
 }

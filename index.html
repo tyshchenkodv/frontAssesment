@@ -1,39 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <title>Front assessment</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
         <link href="./styles/style.css" rel="stylesheet">
         <script type="text/javascript" src="./js/changeIcon.js" defer></script>
+        <script type="text/javascript" src="./js/pagination.js" media="all and (max-width:1024px)" defer></script>
     </head>
     <body>
-        <header>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="./svg/logo.svg" alt="Logo"/>
-                    <p>Apartment Owners Association</p>
-                </a>
-            </div>
-            <div class="navigation" id="navButtons">
-                <a href="#about">About us</a>
-                <a href="#membership">Membership</a>
-                <a href="#services">Services</a>
-                <a href="#news">News and events</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="mobileIconContainer" onclick="handleClickMobile(this)">
-                <div class="mobileNavBar1"></div>
-                <div class="mobileNavBar2"></div>
-                <div class="mobileNavBar3"></div>
-            </div>
-        </header>
-        <section class="hero">
-            <div class="container">
-                <span>
-                    <h1>Apartment ownership with no headache</h1>
-                    <sub>Wide selection of lorem usce volutpat lectus justo, ut suscipit felis congue ut. Vivamus ut ultricies ante dictum. </sub>
-                </span>
+        <div class="page">
+            <header class="header">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <img src="./svg/logo.svg" alt="Logo" width="33px" height="30px"/>
+                        <p class="logo-text">Apartment Owners Association</p>
+                    </a>
                 </div>
-        </section>
+                <div class="navigation" id="navButtons">
+                    <a href="#about">About us</a>
+                    <a href="#membership">Membership</a>
+                    <a href="#services">Services</a>
+                    <a href="#news">News and events</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="mobileIconContainer" onclick="handleClickMobile(this)">
+                    <div class="mobileNavBar1"></div>
+                    <div class="mobileNavBar2"></div>
+                    <div class="mobileNavBar3"></div>
+                </div>
+            </header>
+            <section class="hero">
+                <div class="container">
+                    <h1 class="hero-text hero-text-width">Apartment ownership with no headache</h1>
+                    <p class="sub-text hero-text-width">Wide selection of lorem usce volutpat lectus justo, ut suscipit felis congue ut. Vivamus ut ultricies ante dictum. </p>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container">
+                    <img src="images/Rectangle1.png"  alt="Tenant screening service"/>
+                    <div class="contentText">
+                        <h3>Know who lives at your home with</h3>
+                        <h2>Tenant screening service</h2>
+                        <p>Tenant Screening is a service that allows you to Lorem usce volutpat lectus justo, ut suscipit felis congue ut. Vivamus ut ultricies ante dictum.</p>
+                        <button class="primary-button">Try it</button>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container">
+                    <img src="images/Rectangle2.png"  alt="Tenant screening service"/>
+                    <div class="contentText">
+                        <h3>Make your business grow with</h3>
+                        <h2>Advertising </h2>
+                        <p>Wide selection of advertising oportunities like Lorem usce volutpat lectus justo, ut suscipit felis congue ut. Vivamus ut ultricies ante dictum</p>
+                        <button class="primary-button">Learn more</button>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Navn</th>
+                                <th scope="col">Company</th>
+                                <th scope="col">Level</th>
+                                <th scope="col">Deals closed</th>
+                                <th scope="col">State</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-page="1" class="num">
+                                <td data-label="Navn">Christian Andersen</td>
+                                <td data-label="Company">Pixel Inc.</td>
+                                <td data-label="Level">Senior</td>
+                                <td data-label="Deals closed">315</td>
+                                <td data-label="State">California</td>
+                                <td data-label="Phone">+1764156161</td>
+                                <td data-label="Email">chandersen@pixel.com</td>
+                            </tr>
+                            <tr data-page="2" class="num">
+                                <td data-label="Navn">Christian Andersen</td>
+                                <td data-label="Company">Pixel Inc.</td>
+                                <td data-label="Level">Senior</td>
+                                <td data-label="Deals closed">315</td>
+                                <td data-label="State">California</td>
+                                <td data-label="Phone">+1764156161</td>
+                                <td data-label="Email">chandersen@pixel.com</td>
+                            </tr>
+                            <tr data-page="3" class="num">
+                                <td data-label="Navn">Christian Andersen</td>
+                                <td data-label="Company">Pixel Inc.</td>
+                                <td data-label="Level">Senior</td>
+                                <td data-label="Deals closed">315</td>
+                                <td data-label="State">California</td>
+                                <td data-label="Phone">+1764156161</td>
+                                <td data-label="Email">chandersen@pixel.com</td>
+                            </tr>
+                            <tr data-page="4" class="num">
+                                <td data-label="Navn">Christian Andersen</td>
+                                <td data-label="Company">Pixel Inc.</td>
+                                <td data-label="Level">Senior</td>
+                                <td data-label="Deals closed">315</td>
+                                <td data-label="State">California</td>
+                                <td data-label="Phone">+1764156161</td>
+                                <td data-label="Email">chandersen@pixel.com</td>
+                            </tr>
+                            <tr data-page="5" class="num">
+                                <td data-label="Navn">Christian Andersen</td>
+                                <td data-label="Company">Pixel Inc.</td>
+                                <td data-label="Level">Senior</td>
+                                <td data-label="Deals closed">315</td>
+                                <td data-label="State">California</td>
+                                <td data-label="Phone">+1764156161</td>
+                                <td data-label="Email">chandersen@pixel.com</td>
+                            </tr>
+                            <tr data-page="6" class="num">
+                                <td data-label="Navn">Christian Andersen</td>
+                                <td data-label="Company">Pixel Inc.</td>
+                                <td data-label="Level">Senior</td>
+                                <td data-label="Deals closed">315</td>
+                                <td data-label="State">California</td>
+                                <td data-label="Phone">+1764156161</td>
+                                <td data-label="Email">chandersen@pixel.com</td>
+                            </tr>
+                            <tr data-page="7" class="num">
+                                <td data-label="Navn">Christian Andersen</td>
+                                <td data-label="Company">Pixel Inc.</td>
+                                <td data-label="Level">Senior</td>
+                                <td data-label="Deals closed">315</td>
+                                <td data-label="State">California</td>
+                                <td data-label="Phone">+1764156161</td>
+                                <td data-label="Email">chandersen@pixel.com</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row" class="tfoot-row" colspan="7">
+                                    <div class="tfoot-total">Total agents: 28</div>
+                                    <div class="paginator">
+                                        <label for="itemsPerPage">Resultater per side:</label>
+                                        <select id="itemsPerPage" class="select" onchange="changeItemsPerPage(this)">
+                                            <option value="5">5</option>
+                                            <option value="10">10</option>
+                                            <option value="15">15</option>
+                                        </select>
+                                        <div id="side"></div>
+                                        <button type="button" class="arrow left" onclick="handlePrevClick()"></button>
+                                        <button type="button" class="arrow right" onclick="handleNextClick()"></button>
+                                    </div>
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <p class="footer-text">Copyright © 2020 Apartment Owners Association. All Rights Reserved. <br/><a href="#policy" class="footer-link">Privacy Policy</a></p>
+        </footer>
     </body>
 </html>
