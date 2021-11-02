@@ -14,8 +14,8 @@ function changeItemsPerPage(selectObject) {
 }
 
 let div_num = document.querySelectorAll(".num");
-for (var i = 0; i < div_num.length; i++) {
-    if (i < currentPage * itemsPerPage) {
+for (let i = 0; i < div_num.length; i++) {
+    if (i < currentPage * itemsPerPage || window.innerWidth < 1024) {
         div_num[i].style.display = "table-row";
     }
 }
